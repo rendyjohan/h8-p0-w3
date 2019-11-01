@@ -4,6 +4,7 @@ var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca
 
 var arrInput;
 var tglLahir;
+var tglLahir1;
 var tglSort;
 var bln;
 var uruttgl;
@@ -18,9 +19,12 @@ function dataHandling2(arrInput) {
     
     tglLahir = arrInput[3].split('/');
     console.log(switchBln(tglLahir));
+    
     var tglSort = tglLahir;
     console.log(sortDescending(tglSort));
-    console.log(tglLahir.join('-'));
+    
+    tglLahir1 = arrInput[3].split('/');
+    console.log(tglLahir1.join('-'));
     
     potongNama = arrInput[1];
     console.log(potongNama.slice(0,14));
@@ -51,6 +55,7 @@ function sortDescending(uruttgl) {
         return b-a});
     return result;
 }
+
 
 dataHandling2(input);
 
